@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f0f0f0;
+}
+.container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+input, button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+input {
+  background-color: #ffffff10;
+  color: #f0f0f0;
+}
+button {
+  background-color: #1abc9c;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  width: 150px;
+  height: 50px;
+  
+}
+button:hover {
+  background-color: #16a085;
+}
+.link-button {
+  background: none;
+  border: none;
+  color: #1abc9c;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 1rem;
+}
+.pdf-item {
+  background-color: #ffffff10;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.share-box {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+}
+
