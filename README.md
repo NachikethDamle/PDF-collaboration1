@@ -28,13 +28,13 @@ PDF-collab/
 
 ### 1. Install dependencies
 ```bash
-cd backend
+cd server
 npm install
 ```
 
 ### 2. Create `.env` file
 
-Make a `.env` file inside the `backend/` folder:
+Make(Create) a `.env` file inside the `server/` folder:
 
 ```env
 PORT=5000
@@ -67,7 +67,7 @@ Gmail does **not** allow regular passwords to be used in apps. You must generate
 5. Click **Generate**
 6. Copy the 16-digit password and use it as `EMAIL_PASS` in your `.env`
 
-> 📧 This allows Nodemailer to send emails from your Gmail securely.
+> 📧 This allows Nodemailer to send emails from your Gmail securely and If confused about app password then you will find many youtube videos regarding it.
 
 ---
 
@@ -110,7 +110,7 @@ Your app will be live at: [http://localhost:3000](http://localhost:3000)
 
 ## ✅ Todo / Improvements
 
-- 🔒 Role-based access
+- 🔒 Simultaneous team interaction
 - 📥 Shared PDF viewer
 - ☁️ Deploy backend (Render) and frontend (Vercel)
 
