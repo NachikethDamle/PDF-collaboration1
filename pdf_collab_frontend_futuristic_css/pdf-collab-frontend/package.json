@@ -1,7 +1,7 @@
 {
   "name": "pdf-collab-frontend",
   "version": "1.0.0",
-  "proxy": "http://localhost:5000",
+  "proxy": "https://pdf-collaboration1-2.onrender.com",
 
   "private": true,
   "dependencies": {
