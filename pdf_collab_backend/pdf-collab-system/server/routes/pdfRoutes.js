@@ -32,7 +32,7 @@ router.post('/share/:id', auth, async (req, res) => {
     await pdf.save();
   }
 
-  const link = `http://localhost:3000/shared/${pdf._id}?email=${email}`;
+  const link = `https://pdfcollaboration1.vercel.app/shared/${pdf._id}?email=${email}`;
   await sendInviteEmail(email, link);
 
   res.json({ message: 'Invite sent', link });
