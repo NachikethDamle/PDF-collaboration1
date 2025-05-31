@@ -21,7 +21,7 @@ function Dashboard({ token }) {
     e.preventDefault();
     const formData = new FormData();
     formData.append('pdf', file);
-    await axios.post('/api/pdf/upload', formData, {
+    await axios.post(`${process.env.REACT_APP_API_BASE}/api/pdf/upload`, formData, {
       headers: {
         Authorization: `Bearer ${token}`,
         'Content-Type': 'multipart/form-data'
