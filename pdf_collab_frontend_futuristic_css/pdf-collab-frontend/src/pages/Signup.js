@@ -26,7 +26,7 @@ const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     }
 
     try {
-      await axios.post('/api/auth/signup', { name, email, password });
+      await axios.post(`${process.env.REACT_APP_API_BASE}/api/auth/signup`, { name, email, password });
       alert('Signup successful! Please log in.');
       switchToLogin();
     } catch (err) {

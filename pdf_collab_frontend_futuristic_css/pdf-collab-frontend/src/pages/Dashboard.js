@@ -8,7 +8,7 @@ function Dashboard({ token }) {
   const [sharingId, setSharingId] = useState(null);
 
   const fetchPDFs = () => {
-    axios.get('/api/pdf/dashboard', {
+    axios.get(`${process.env.REACT_APP_API_BASE}/api/pdf/dashboard`, {
       headers: { Authorization: `Bearer ${token}` }
     }).then(res => setPdfs(res.data));
   };
@@ -33,7 +33,7 @@ function Dashboard({ token }) {
 
   const handleShare = async (id) => {
     if (!shareTarget) return alert('Enter an email to share with.');
-    await axios.post(`/api/pdf/share/${id}`, { email: shareTarget }, {
+    await axios.post(`${process.env.REACT_APP_API_BASE}/api/pdf/share/${id}`, { email: shareTarget }, {
       headers: { Authorization: `Bearer ${token}` }
     });
     alert(`Invite sent to ${shareTarget}`);

@@ -7,7 +7,7 @@ function Login({ setToken, switchToSignup }) {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    const res = await axios.post('/api/auth/login', { email, password });
+    const res = await axios.post(`${process.env.REACT_APP_API_BASE}/api/auth/login`, { email, password });
     setToken(res.data.token);
     localStorage.setItem('token', res.data.token);
   };
