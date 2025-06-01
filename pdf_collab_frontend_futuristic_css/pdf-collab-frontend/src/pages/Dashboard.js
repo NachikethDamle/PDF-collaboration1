@@ -59,7 +59,7 @@ function Dashboard({ token }) {
       {pdfs.map(pdf => (
         <div key={pdf._id} className="pdf-item">
       <a 
-          href={`https://pdf-collaboration1-2.onrender.com/${pdf.filePath}`} 
+            href={`https://pdf-collaboration1-2.onrender.com/api/pdf/file/${pdf.fileId}`} 
             download 
             target="_blank" 
             rel="noreferrer"
