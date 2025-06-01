@@ -41,7 +41,7 @@ const storage = new GridFsStorage({
 });
 
 
-const upload = multer({ dest: 'uploads/' });
+const upload = multer({ storage });
 
 router.post('/upload', auth, upload.single('pdf'), async (req, res) => {
   const pdf = await PDF.create({
