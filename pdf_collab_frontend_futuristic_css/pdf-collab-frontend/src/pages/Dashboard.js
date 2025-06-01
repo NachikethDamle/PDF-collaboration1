@@ -58,8 +58,15 @@ function Dashboard({ token }) {
       <h3 style={{ marginTop: '20px' }}>Your PDFs</h3>
       {pdfs.map(pdf => (
         <div key={pdf._id} className="pdf-item">
-          <a href={`http://localhost:5000/${pdf.filePath}`} target="_blank" rel="noreferrer">{pdf.name}</a>
-          {sharingId === pdf._id ? (
+      <a 
+          href={`https://pdf-collaboration1-2.onrender.com/${pdf.filePath}`} 
+            download 
+            target="_blank" 
+            rel="noreferrer"
+        >
+          {pdf.name}
+          </a>          
+            {sharingId === pdf._id ? (
             <div className="share-box">
               <input
                 type="email"
