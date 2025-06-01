@@ -10,7 +10,7 @@ const upload = multer({ dest: 'uploads/' });
 router.post('/upload', auth, upload.single('pdf'), async (req, res) => {
   const pdf = await PDF.create({
     name: req.file.originalname,
-    filePath: req.file.path,
+    filePath: `/uploads/${req.file.filename}`,
     owner: req.user.id
   });
   res.json(pdf);
